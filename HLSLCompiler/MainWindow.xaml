@@ -1,0 +1,31 @@
+﻿<Window x:Class="HLSLCompiler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HLSLCompiler"
+        mc:Ignorable="d"
+        Title="HLSL Compiler" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="SourceBox" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="0" Margin="2">
+
+        </TextBox>
+        <StackPanel Grid.Column="1">
+            <Label Margin="2">Profile</Label>
+            <TextBox Name="BoxProfile" Margin="2">vs_4_0</TextBox>
+            <Label>Entry</Label>
+            <TextBox Name="BoxEntry"  Margin="2">VS</TextBox>
+            <Button Name="BtnCompile" Margin="2">Compile</Button>
+
+            <Separator Margin="0 5 0 15"></Separator>
+
+            <TextBox Margin="2" Name="compileResult" MaxHeight="100" TextWrapping="Wrap" ></TextBox>
+            <Button Name="BtnExport">Export</Button>
+        </StackPanel>
+    </Grid>
+</Window>
